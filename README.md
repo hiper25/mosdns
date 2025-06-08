@@ -1,22 +1,17 @@
-![mosdns](https://truecharts.org/img/hotlink-ok/chart-icons/mosdns.png)
-
-
 # mosdns
 一个插件化的 DNS 转发/分流器。
 
 项目地址: [github.com/IrineSistiana/mosdns](https://github.com/IrineSistiana/mosdns)
 
-Dockerfile: [github.com/Sagit-chu/mosdns-container](https://github.com/Sagit-chu/mosdns-container)
+Dockerfile: [github.com/hiper25/mosdns](https://github.com/hiper25/mosdns)
 # 支持的平台
 * `linux/amd64`
-* `linux/arm/v7`
-* `linux/arm64`
 
 # 关于镜像
-镜像基于 `alpine:latest`。包含 mosdns 和，TLS 需要的 ca 根证书包，配置文件，geoip.dat，geosite.dat。
+镜像基于 `alpine:latest`。包含 mosdns 和配置文件。
 
 
-配置文件在[github.com/Sagit-chu/mosdns-container](https://github.com/Sagit-chu/mosdns-container)
+配置文件在[github.com/hiper25/mosdns](https://github.com/hiper25/mosdns)
 
 **流程：**
 
@@ -33,7 +28,7 @@ Dockerfile: [github.com/Sagit-chu/mosdns-container](https://github.com/Sagit-chu
 geoip，geosite会随着镜像更新（挂载配置文件夹，数据文件也会随着镜像更新)
 # 启动容器
 ```
-docker run -d --name mosdns -p 5454:53/udp -p 5454:53/tcp  sagit.io/601096721/mosdns:latest
+docker run -d --name mosdns -p 5454:53/udp -p 5454:53/tcp mosdns:latest
 ```
 
 因为容器已经包含了配置文件，所以可以不映射`/etc/mosdns`，如果需要修改配置文件可以映射配置目录。
