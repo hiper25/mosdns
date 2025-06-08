@@ -1,11 +1,10 @@
 # mosdns v5
 FROM golang:alpine AS builder
 ARG CGO_ENABLED=0
-ARG REPOSITORY
 
 WORKDIR /root
 RUN apk add --update git \
-	&& git clone https://github.com/${REPOSITORY} mosdns \
+	&& git clone https://github.com/IrineSistiana/mosdns mosdns \
 	&& cd ./mosdns \
 	&& git checkout v5.3.3 \
 	&& go build -ldflags "-s -w -X main.version=v5.3.3" -trimpath -o mosdns
