@@ -1,16 +1,14 @@
 # mosdns v5
 FROM --platform=${TARGETPLATFORM} golang:alpine as builder
 ARG CGO_ENABLED=0
-ARG TAG
 ARG REPOSITORY
 
 WORKDIR /root
 RUN apk add --update git \
 	&& git clone https://github.com/${REPOSITORY} mosdns \
 	&& cd ./mosdns \
-	&& git fetch --all --tags \
-	&& git checkout tags/${TAG} \
-	&& go build -ldflags "-s -w -X main.version=${TAG}" -trimpath -o mosdns
+	&& git checkout v5.3.3 \
+	&& go build -ldflags "-s -w -X main.version=v5.3.3" -trimpath -o mosdns
 
 FROM --platform=${TARGETPLATFORM} alpine:latest
 LABEL maintainer="Sgit <github.com/Sagit-chu>"
