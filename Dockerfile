@@ -24,7 +24,7 @@ ADD config.yaml /config.yaml
 ADD hosts /hosts
 # ADD https://github.com/Loyalsoldier/v2ray-rules-dat/raw/release/geoip.dat /geoip.dat
 # ADD https://github.com/Loyalsoldier/v2ray-rules-dat/raw/release/geosite.dat /geosite.dat
-ADD https://raw.githubusercontent.com/IceCodeNew/4Share/master/geoip_china/china_ip_list.txt /geoip_cn.txt
+ADD https://raw.githubusercontent.com/gaoyifan/china-operator-ip/refs/heads/ip-lists/china.txt /geoip_cn.txt
 ADD https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/reject-list.txt /geosite_category-ads-all.txt
 ADD https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/proxy-list.txt /geosite_geolocation-!cn.txt
 ADD https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/direct-list.txt /geosite_cn.txt
