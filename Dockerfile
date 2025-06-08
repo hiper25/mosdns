@@ -23,6 +23,7 @@ ADD entrypoint.sh /entrypoint.sh
 ADD config.yaml /config.yaml
 ADD hosts /hosts
 ADD https://raw.githubusercontent.com/gaoyifan/china-operator-ip/refs/heads/ip-lists/china.txt /geoip_cn.txt
+ADD https://raw.githubusercontent.com/gaoyifan/china-operator-ip/refs/heads/ip-lists/china6.txt /geoip_cn_v6.txt
 ADD https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/reject-list.txt /geosite_category-ads-all.txt
 ADD https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/proxy-list.txt /geosite_geolocation-!cn.txt
 ADD https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/direct-list.txt /geosite_cn.txt

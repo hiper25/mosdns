@@ -9,6 +9,7 @@ fi
 # cp -u /geosite.dat /etc/mosdns/geosite.dat
 # cp -u /geoip.dat /etc/mosdns/geoip.dat
 cp -u /geoip_cn.txt /etc/mosdns/geoip_cn.txt
+cp -u /geoip_cn_v6.txt /etc/mosdns/geoip_cn_v6.txt
 cp -u /geosite_category-ads-all.txt /etc/mosdns/geosite_category-ads-all.txt
 cp -u /geosite_geolocation-!cn.txt /etc/mosdns/geosite_geolocation-!cn.txt
 cp -u /geosite_cn.txt /etc/mosdns/geosite_cn.txt

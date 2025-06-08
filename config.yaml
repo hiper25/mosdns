@@ -81,7 +81,9 @@ plugins:
     type: sequence
     args:
       - exec: $upstreams dnspod aliyun
-      - matches: "!resp_ip &./geoip_cn.txt"
+      - matches: 
+        - "!resp_ip &./geoip_cn.txt"
+        - "!resp_ip &./geoip_cn_v6.txt"
         exec: drop_resp     # 如果应答里没有 cn IP，丢掉。
 
   # 利用 fallback 机制按 IP 分流。如果 local 服务器返回了 cn 的应答就接受，非 cn 的应答会被丢弃，使用 remote 服务器的应答。
